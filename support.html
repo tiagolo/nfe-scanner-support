@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NF-e Scanner — Suporte</title>
+  <style>
+    :root {
+      --blue: #2563EB;
+      --bg: #F9FAFB;
+      --surface: #FFFFFF;
+      --text: #111827;
+      --text-secondary: #6B7280;
+      --border: #E5E7EB;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0F172A;
+        --surface: #1E293B;
+        --text: #F1F5F9;
+        --text-secondary: #94A3B8;
+        --border: #334155;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--blue);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+    header p  { font-size: 1.1rem; opacity: 0.9; }
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--blue);
+    }
+    details { border-bottom: 1px solid var(--border); padding: 14px 0; }
+    details:last-child { border-bottom: none; }
+    summary {
+      cursor: pointer;
+      font-weight: 500;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; font-size: 1.2rem; color: var(--text-secondary); }
+    details[open] summary::after { content: "−"; }
+    details p { margin-top: 10px; color: var(--text-secondary); font-size: 0.95rem; }
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    .contact-box p { color: var(--text-secondary); margin-bottom: 16px; }
+    .btn {
+      display: inline-block;
+      background: var(--blue);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--blue); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>📄 NF-e Scanner</h1>
+  <p>Suporte ao aplicativo</p>
+</header>
+
+<main>
+
+  <div class="card">
+    <h2>Perguntas frequentes</h2>
+
+    <details>
+      <summary>O app não está lendo o QR code da minha nota</summary>
+      <p>Certifique-se de que a câmera está com boa iluminação e que o QR code está dentro da moldura. Tente aumentar o zoom com o botão no canto da tela. Se o QR code estiver amassado ou muito pequeno, aproxime mais o celular.</p>
+    </details>
+
+    <details>
+      <summary>A nota foi para a fila em vez de gerar o PDF</summary>
+      <p>Isso acontece quando a SEFAZ ainda não autorizou a nota no momento do escaneamento — é comum logo após a compra. O app reprocessa automaticamente a cada 30 minutos. Você também pode tentar manualmente pela aba Fila.</p>
+    </details>
+
+    <details>
+      <summary>Como encontro os PDFs gerados?</summary>
+      <p>Os PDFs aparecem na aba Histórico dentro do app. Para acessar os arquivos diretamente, abra o app Arquivos do iOS, vá em "No meu iPhone" e procure a pasta NF-e Scanner.</p>
+    </details>
+
+    <details>
+      <summary>O app funciona com notas de qualquer estado?</summary>
+      <p>Sim. O app abre o portal da SEFAZ do estado emissor diretamente pelo link embutido no QR code. Funciona com portais de todos os estados brasileiros que usam o padrão NF-e / NFC-e.</p>
+    </details>
+
+    <details>
+      <summary>Meus dados são enviados para algum servidor?</summary>
+      <p>Não. O app não possui servidor próprio. As URLs de consulta são enviadas diretamente aos servidores da SEFAZ (governo brasileiro). Os PDFs e metadados ficam somente no seu dispositivo.</p>
+    </details>
+
+    <details>
+      <summary>Por que o app pede permissão de câmera?</summary>
+      <p>A câmera é necessária exclusivamente para ler o QR code impresso na nota fiscal. O app não acessa fotos ou vídeos.</p>
+    </details>
+
+    <details>
+      <summary>Como apago uma nota da fila ou do histórico?</summary>
+      <p>Na aba Fila ou Histórico, deslize o item para o lado ou toque no ícone de lixeira para removê-lo.</p>
+    </details>
+  </div>
+
+  <div class="contact-box">
+    <p>Não encontrou o que precisava? Entre em contato por e-mail.</p>
+    <a class="btn" href="https://github.com/tiagolo/nfe-scanner-support/issues/new">Abrir chamado no GitHub</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>NF-e Scanner &nbsp;·&nbsp; <a href="privacy.html">Política de Privacidade</a></p>
+</footer>
+
+</body>
+</html>
